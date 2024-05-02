@@ -200,18 +200,18 @@
                 $('body').addClass('overflow-hidden');
                 e.stopPropagation();
             });
-            
+
             $('.profile-right-sidebar').on('click', function (e) {
                 e.stopPropagation();
             });
-        
+
             $(document).on('click', function (e) {
                 if (!$(e.target).closest('.profile-right-sidebar').length) {
                     $('.profile-right-sidebar').removeClass('active');
                     $('body').removeClass('overflow-hidden');
                 }
             });
-        });        
+        });
 
 
 
@@ -222,7 +222,7 @@
         let blueMode = localStorage.getItem('blueMode');
         const enableBlueMode = () => {
             $('body').removeClass('light-theme dark-theme');
-            $('.header .main-logo .logo-big img, .mobile-logo img, .logo img').attr('src', 'assets/images/logo-big.png');
+            $('.header .main-logo .logo-big img, .mobile-logo img, .logo img').attr('src', 'admin/assets/images/logo-big.png');
             localStorage.setItem("blueMode", "enabled");
             localStorage.removeItem("darkMode");
         };
@@ -239,7 +239,7 @@
         let darkMode = localStorage.getItem('darkMode');
         const enableDarkMode = () => {
             $('body').removeClass('light-theme').addClass('dark-theme');
-            $('.header .main-logo .logo-big img, .mobile-logo img, .logo img').attr('src', 'assets/images/logo-big.png');
+            $('.header .main-logo .logo-big img, .mobile-logo img, .logo img').attr('src', 'admin/assets/images/logo-big.png');
             localStorage.setItem("darkMode", "enabled");
             localStorage.removeItem("blueMode");
         };
@@ -255,7 +255,7 @@
         let lightMode = localStorage.getItem('lightMode');
         const enableLightMode = () => {
             $('body').removeClass('dark-theme').addClass('light-theme');
-            $('.header .main-logo .logo-big img, .mobile-logo img, .logo img').attr('src', 'assets/images/logo-black.png');
+            $('.header .main-logo .logo-big img, .mobile-logo img, .logo img').attr('src', 'admin/assets/images/logo-black.png');
             localStorage.removeItem("blueMode");
             localStorage.removeItem("darkMode");
         };
@@ -292,7 +292,7 @@
                 $('body').addClass('overflow-hidden');
                 e.stopPropagation()
             });
-            
+
             $('.right-sidebar').on('click', function (e) {
                 e.stopPropagation();
             });
@@ -566,7 +566,7 @@
             var styleSheet = $(this).data('color');
             $(this).addClass('active').siblings().removeClass('active');
             $('#primaryColor').attr('href', 'assets/css/' + styleSheet + '.css');
-            
+
             // Save the selected style sheet in local storage
             localStorage.setItem('selectedStyleSheet', styleSheet);
         });
@@ -638,7 +638,7 @@
         $('#sidebarHover').on('click', function () {
             enableSidebarHover();
         });
-        
+
         $('#sidebarDefault').on('click', function (e) {
             e.preventDefault();
             e.stopPropagation();
@@ -698,8 +698,8 @@
             $('.sidebar-bg-btn[data-img="' + navbackgroundImage + '"]').addClass('active').siblings().removeClass('active');
             $('.main-sidebar').css('background-image', 'url(' + navbackgroundImage + ')');
         }
-        
-        
+
+
 
 
 
@@ -1604,7 +1604,7 @@
             });
         }
 
-        
+
 
         //------------------------------------------------------------------------------------------------------------------
         // Icon Copy Option On Icon Page
@@ -1899,7 +1899,7 @@
         //------------------------------------------------------------------------------------------------------------------
         if($('#otp_target').length) {
             $('#otp_target').otpdesigner();
-            
+
             $('.security-code-submit').on('click', function() {
                 var emptyOtpContents = $('.otp-content').filter(function() {
                     return $(this).text().trim() === '';
